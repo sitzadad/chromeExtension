@@ -1,0 +1,36 @@
+body {
+  background-color: #272b30;
+  margin: 0;
+  font-family: 'Open Sans';
+  width: 300px; }
+
+#main {
+  padding-top: 50px;
+  text-align: center; }
+
+input {
+  font-size: 2em;
+  width: 100%;
+  box-sizing: border-box;
+  color: #272b30; }
+
+button {
+  width: 100%;
+  font-size: 2em;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 1px 1px grey;
+  background-color: #D9534F;
+  margin-top: 10px;
+  color: white; }
+  button:hover {
+    transform: scale(1.1, 1.1); }
+
+#resultsWrapper {
+  padding-top: 50px;
+  width: 100%;
+  color: white;
+  text-align: left; }
+
+span {
+  display: block; }

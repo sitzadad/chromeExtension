@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Get Weather",
+  "description": "Supposed to get weather",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["bower_components/jquery/dist/jquery.js","background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["bower_components/jquery/dist/jquery.js","grabber.js"],
+        "css":["style.css"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://api.openweathermap.org/data/2.5/weather; object-src 'self'"
+
+
+}
